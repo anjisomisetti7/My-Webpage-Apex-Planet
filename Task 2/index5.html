@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Internship Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>My Internship Task</h1>
+    <div class="grid">
+      
+      <!-- Contact Form -->
+      <div class="card">
+        <h2>Contact Form</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" />
+          <div class="error" id="nameError"></div>
+
+          <input type="email" id="email" placeholder="Your Email" />
+          <div class="error" id="emailError"></div>
+
+          <textarea id="message" placeholder="Your Message"></textarea>
+          <button type="submit">Submit</button>
+          <div class="success" id="successMessage"></div>
+        </form>
+      </div>
+
+      <!-- To-Do List -->
+      <div class="card">
+        <h2>To-Do List</h2>
+        <div class="todo-input">
+          <input type="text" id="taskInput" placeholder="Add new task..." />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <div class="success" id="taskSuccessMessage"></div>
+        <ul id="taskList"></ul>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
