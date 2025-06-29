@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuizPlay Arena</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- Home Screen -->
+  <div class="card" id="home-screen">
+    <h1 class="main-title">QuizPlay Arena</h1>
+    <p class="subtitle">🚀 The Ultimate Quiz Challenge — Test Your Knowledge & Laugh Along!</p>
+    <div class="btn-group">
+      <button onclick="showTopicScreen()">🧠 Take a Quiz</button>
+      <button onclick="getJoke()">😂 Get a Joke</button>
+    </div>
+  </div>
+
+  <!-- Topic Selection Screen -->
+  <div class="card" id="topic-screen" style="display:none;">
+    <h2>🧠 Pick Your Quiz Topic</h2>
+    <p>Select a topic to begin your quiz!</p>
+    <select id="topic">
+      <option value="Cricket">🏏 Cricket</option>
+      <option value="Grammar">📚 Grammar</option>
+      <option value="Science">🔬 Science</option>
+    </select>
+    <br><br>
+    <button onclick="startQuiz(document.getElementById('topic').value)">Start Quiz</button>
+    <br><br>
+    <button onclick="showScreen('home-screen')">⬅️ Back to Home</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div class="card" id="quiz-screen" style="display:none;">
+    <h2 id="quiz-title">Quiz Zone</h2>
+    <div id="question-block"></div>
+    <br>
+    <button onclick="showScreen('home-screen')">⬅️ Back to Home</button>
+  </div>
+
+  <!-- Joke Screen -->
+<div class="card" id="joke-screen" style="display:none;">
+  <h2>🤣 Here's a Joke for You!</h2>
+  <p id="joke-setup" style="font-weight: bold;"></p>
+  <p id="joke-punchline" style="color: #6b7280;"></p>
+  <br>
+  <div class="btn-group">
+    <button onclick="getJoke()">🔁 Get Another Joke</button>
+    <button onclick="showScreen('home-screen')">⬅️ Back to Home</button>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
