@@ -3,27 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Study Planner</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Multi-Category Online Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>📘 Student Study Planner</h1>
-    <button id="toggleTheme">🌙 Dark Mode</button>
+    <h1>My Online Store</h1>
+    <p>
+      <button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+      <button onclick="showWishlist()">Wishlist (<span id="wishlist-count">0</span>)</button>
+    </p>
   </header>
 
-  <main>
-    <div class="controls">
-      <input type="text" id="subjectName" placeholder="Enter Subject (e.g., Java)" />
-      <button onclick="addSubject()">Add Subject</button>
-      <input type="text" id="searchInput" placeholder="Search Subject..." />
-    </div>
+  <nav>
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('fruits')">Fruits</button>
+    <button onclick="filterCategory('electronics')">Electronics</button>
+    <button onclick="filterCategory('clothes')">Clothes</button>
+    <button onclick="filterCategory('vegetables')">Vegetables</button>
+  </nav>
 
-    <div id="subjectsContainer"></div>
-  </main>
+  <div class="responsive">
+    <div id="product-list" class="products"></div>
+    <div id="cart" class="cart"></div>
+    <div id="wishlist" class="wishlist"></div>
+    <div id="payment" class="payment"></div>
+    <div id="confirmation" class="confirmation"></div>
+  </div>
 
   <footer>
-    <p>Created by Shahanthi Velagala | shahanthiv@gmail.com</p>
+    <p>&copy; 2025 My Online Store</p>
   </footer>
 
   <script src="script.js"></script>
