@@ -11,7 +11,7 @@ This project is part of Task 4 from my internship at **Apex Planet**. It include
 - Soft Skills: Communication, Teamwork, Time Management
 - Certifications: Lakshya 2025(Ideathon),Wave VIT 2024,Communication & Teamwork Certificate
  Failathon & SIH Participation
-- Contact: shahanthiv@gmail.com
+- Contact: anjisomisetti953@gmail.com
 
 ### 2. ✅ To-Do List
 - Add/delete tasks with localStorage support.
